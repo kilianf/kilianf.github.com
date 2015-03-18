@@ -6,10 +6,24 @@ img {
   height: auto;
 }
 
-.images {
 
-}
 
-.info {
-    text-align: left;
+@media only screen and (min-width : 768px) {
+
+
+    .images {
+        
+    }
+    .mobile img {
+        margin-top: 130%;
+        margin-left: -5%;
+    }
+    .desktop img {
+        margin-left: 5%;
+    }      
+    .info {
+        text-align: left;
+    }
+
+
 }
