@@ -1,3 +1,15 @@
-h1 {
-  font-family: "utopia-std-headline";
+* {
+  font-family: "adelle";
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.images {
+
+}
+
+.info {
+    text-align: left;
 }
