@@ -1,6 +1,7 @@
 * {
     font-family: "nimbus-sans-condensed";
     color: #777;
+    letter-spacing: normal;
 }
 h1 {
     font-weight: 700;
@@ -66,6 +67,15 @@ a:focus::after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.mobile {
+  padding: 30px 130px;
+}
+.desktop {
+  padding: 5%;
+}
+
+
 
 @media only screen and (min-width : 768px) {
 
