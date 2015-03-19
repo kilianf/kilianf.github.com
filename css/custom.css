@@ -11,6 +11,7 @@ h1 {
 h2 {
     margin: 30px 0 0 0;
     text-transform: uppercase;
+    line-height: 1.2;
 }
 p, li, a {
     font-weight: 400;
@@ -22,7 +23,7 @@ img {
     height: auto;
 }
 .project {
-    padding: 100px 0;        
+  padding: 70px 0;
 }
 .dark {
   padding: 10px 0 40px;
@@ -79,7 +80,10 @@ a:focus::after {
 .header h1,
 .header ul,
 .header p {
-    margin: .3% 0 0 5%;
+    margin: .3% 0 0 10%;
+}
+.header h1 {
+  margin-top: 10%;
 }
 .header ul {
     padding:0;
@@ -99,6 +103,14 @@ a:focus::after {
 
 @media only screen and (min-width : 768px) {
 
+    .header h1 {
+      margin-top: 10%;
+    }
+    .header h1,
+    .header ul,
+    .header p {
+        margin: .3% 0 0 5%;
+    }
     h2 {
       margin: 0;
     }
@@ -137,7 +149,9 @@ a:focus::after {
         text-align: left;
         padding: 35px 0 0 0;
     }
-
+    .project {
+        padding: 100px 0;        
+    }
     .project-1 {
     }
     .project-2 .mobile img {
