@@ -24,7 +24,7 @@ img {
 @media only screen and (min-width : 768px) {
 
     .header {
-        padding: 100px 0;
+        padding: 100px 0 0;
     }
     .header h1,
     .header ul,
@@ -64,6 +64,20 @@ img {
         color: inherit;
     }
     .project-1 {
+    }
+    .project-2 .mobile img {
+        margin-top: 32%;
+    }
+    .project-3 .mobile img { 
+        margin-top: 166%;
+    }
+    .project-4 .mobile img {
+        margin-top: 152%;
+    }
+    .project-5 .mobile img {
+        margin-top: 61%;
+    }
+    .project-6 .mobile img {
     }
     .project {
         padding: 100px 0;        
