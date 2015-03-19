@@ -1,12 +1,11 @@
 * {
-  font-family: "adelle";
+    font-family: "adelle";
+    color: #777;
 }
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
-
-
 
 @media only screen and (min-width : 768px) {
 
@@ -24,6 +23,23 @@ img {
     .info {
         text-align: left;
     }
-
+    .header ul {
+        padding:0;
+    }
+    .header li {
+        list-style: none;
+        display: inline-block;
+        color: #777;
+    }
+    .header li:nth-child(2),
+    .header li:nth-child(3) {        
+        padding-left: 10px;
+        margin-left: 10px;
+        border-left: 1px solid #ddd;
+    }
+    .header a {
+        text-decoration: none;
+        color: inherit;
+    }
 
 }
