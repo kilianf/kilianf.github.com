@@ -1,6 +1,12 @@
 * {
-    font-family: "adelle";
+    font-family: "nimbus-sans-condensed";
     color: #777;
+}
+h1 {
+    font-weight: 700;
+}
+p, li, a {
+    font-weight: 400;
 }
 img {
     max-width: 100%;
