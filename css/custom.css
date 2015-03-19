@@ -80,7 +80,7 @@ a:focus::after {
 .header h1,
 .header ul,
 .header p {
-    margin: .3% 0 0 10%;
+    margin: .3% 0 0 15%;
 }
 .header h1 {
   margin-top: 10%;
