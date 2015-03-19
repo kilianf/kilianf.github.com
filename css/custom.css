@@ -69,15 +69,48 @@ a:focus::after {
 }
 
 .mobile {
-  padding: 30px 130px;
+  padding: 30px 21%;
 }
 .desktop {
   padding: 5%;
 }
+.info {
 
+}
+.header h1,
+.header ul,
+.header p {
+    margin: .3% 0 0 5%;
+}
+.header ul {
+    padding:0;
+}
+.header li {
+    list-style: none;
+    display: inline-block;
+    color: #777;
+}
+.header li:nth-child(2),
+.header li:nth-child(3) {        
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #ddd;
+}
 
 
 @media only screen and (min-width : 768px) {
+
+
+    .mobile {
+      padding: 0;
+    }
+    .desktop {
+      padding: 0;
+    }
+    .info {
+      
+    }
+
 
     .header {
         padding: 100px 0 0;
@@ -101,20 +134,7 @@ a:focus::after {
         text-align: left;
         padding: 35px 0 0 0;
     }
-    .header ul {
-        padding:0;
-    }
-    .header li {
-        list-style: none;
-        display: inline-block;
-        color: #777;
-    }
-    .header li:nth-child(2),
-    .header li:nth-child(3) {        
-        padding-left: 10px;
-        margin-left: 10px;
-        border-left: 1px solid #ddd;
-    }
+
     .project-1 {
     }
     .project-2 .mobile img {
