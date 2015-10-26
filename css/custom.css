@@ -168,4 +168,7 @@ a:focus::after {
     }
     .project-6 .mobile img {
     }
+    .project-7 .mobile img {
+        margin-top: 40%;
+    }
 }
