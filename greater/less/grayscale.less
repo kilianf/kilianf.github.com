@@ -131,13 +131,15 @@ a {
             padding: 0;
             background: black;
             .navbar-brand {
-                background-position: 0 center;
+                background-position: 100px center;
             }
         }
         .navbar-brand {
             font-weight: 700;
-            background: url(../img/greater-logo.svg) 0 -100px no-repeat transparent;
+            background: url(../img/greater-logo.svg) 100px -100px no-repeat transparent;
             padding: 15px 15px 15px 65px;
+            text-indent: -999999px;
+            overflow: hidden;
             &:focus {
                 outline: none;
             }
@@ -415,17 +417,20 @@ p {
     #people {
         div {
             width: 50%;
-            display: inline-block;
             margin: 0;
             float: left;
-            height: 220px;
+            height: 300px;
             .background-cover(cover);
             background-position: center center;
             position: relative;
             overflow: hidden;
-            &:hover span {
-                .scale(1);
-                opacity: 1;
+            display: inline-block;
+            &:hover,
+            &:focus {
+                span {
+                    .scale(1);
+                    opacity: 1;
+                }                
             }
             a {
                 text-decoration: underline;
@@ -437,18 +442,22 @@ p {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                padding-top: 120px;
+                padding: 15% 10% 15%;
                 background: url(../img/lines-small.svg) right center rgba(0,0,0,.75);
                 .transition(all .1s linear);
                 opacity: 0;
+                vertical-align: middle;
                 p {
                     margin-bottom: 0;
                 }
             }
+            p {
+                font-size: 13px;
+            }
             h4 {
                 position: relative;
                 margin-bottom: 60px;
-                font-size: 30px;
+                font-size: 20px;
                 &:after {
                     content: "";
                     position: absolute;
@@ -477,10 +486,10 @@ p {
             background-image: url(../img/5-mitchell.jpg) 
         }
         .pax-6 {
-            background-image: url(../img/6-david.jpg) 
+            background-image: url(../img/7-dave.jpg) 
         }
         .pax-7 {
-            background-image: url(../img/7-dave.jpg) 
+            background-image: url(../img/6-david.jpg) 
         }
         .pax-8 {
             background-image: url(../img/8-sharon.jpg) 
@@ -491,7 +500,19 @@ p {
             div {
                 width: 25%;
                 height: 400px;
-            }
+                display: table;
+                span {
+                    padding: 0 60px;
+                    display: table-cell;
+                    position: static;
+                }
+                p {
+                    font-size: 15px;
+                }
+                h4 {
+                    font-size: 30px;
+                }
+            }            
         }
     }
 }
@@ -508,7 +529,7 @@ p {
     }
     a {
         display: inline-block;
-        margin: 30px;
+        margin: 10px 30px;
         .transform-origin(center, center);
         &:hover {
             .scale(1.1);
@@ -516,6 +537,9 @@ p {
     }
     @media(min-width:768px) {
         padding: 150px 0;
+        a {
+            margin: 30px;
+        }
     }
 }
 
@@ -590,6 +614,11 @@ p {
             margin-bottom: 120px;
         }
     }
+    #movement-dots {
+        position: absolute;
+        top: 260px;
+        right: 65px;
+    }
     @media(min-width:768px) {
         padding-top: 150px;
         padding-bottom: 150px;
@@ -603,11 +632,16 @@ p {
         width: 100%;
         height: auto;
     }
-    .col-lg-6 {
+    .story-right {
         padding-top: 50px;
     }
     .story-pic {
         display: none;
+    }
+    #story-dots {
+        position: absolute;
+        left: 190px;
+        top: -40px;
     }
     @media(min-width:768px) {
         padding-top: 150px;
