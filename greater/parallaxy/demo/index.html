@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DEMO - parallaxy.js</title>
+		<link rel="stylesheet" type="text/css" href="parallaxy.css" />
+		<link rel="stylesheet" type="text/css" href="demo.css" />
+	</head>
+	<body>
+
+		<h1>Runs parallaxy with images and videos. Adjusted speed on 3rd example.</h1>
+
+		<div data-parallaxy class="container">
+			<img src="alps.jpg" alt="Alps">
+			<div data-parallaxy-ignore class="caption">
+				<h2>Nice view!</h2>
+				<h3>Almost breathtaking, default speed</h3>
+			</div>
+		</div>
+
+		<div data-parallaxy class="container">
+			<video autoplay loop muted>
+				<source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+				<source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+			</video>
+			<div data-parallaxy-ignore class="caption">
+				<h2>Video works</h2>
+				<h3>...bring the popcorn!</h3>
+			</div>
+		</div>
+
+		<div data-parallaxy class="container">
+			<img src="alps.jpg" alt="Alps" data-parallaxy-speed="1">
+			<div data-parallaxy-ignore class="caption">
+				<h2>Nice view!</h2>
+				<h3>...and then it stopped</h3>
+			</div>
+		</div>
+
+		<h2 style="margin: 400px 0;">Enjoy! :)</h2>
+
+		<script src="parallaxy.js"></script>
+	</body>
+</html>

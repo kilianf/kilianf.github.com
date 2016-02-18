@@ -1,0 +1,17 @@
+@import "https://necolas.github.io/normalize.css/3.0.2/normalize.css";
+
+html, body {
+	margin : 0;
+	text-align: center;
+}
+
+.container {
+	background : lightblue;
+	padding: 200px 0;
+	margin : 100px 0;
+}
+
+.caption {
+	text-shadow: 0 0 15px rgba(255,255,255,0.5),
+				 0 0 5px rgba(255,255,255,0.5);
+}
