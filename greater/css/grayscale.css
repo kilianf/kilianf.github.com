@@ -481,7 +481,7 @@ p b {
     display: table;
   }
   .who-section #people div span {
-    padding: 0 60px;
+    padding: 0 15px;
     display: table-cell;
     position: static;
   }
