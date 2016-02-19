@@ -75,6 +75,10 @@ a {
         font-family: @headline;
         font-size: 12px;
     }
+    .navbar-brand {
+        text-indent: -999999px;
+        overflow: hidden;
+    }
     .nav {
         li {
             a {                    
@@ -136,14 +140,15 @@ a {
         }
         .navbar-brand {
             font-weight: 700;
-            background: url(../img/greater-logo.svg) 100px -100px no-repeat transparent;
+            background: url('../img/greater-logo.svg') 100px -100px no-repeat transparent;
             padding: 15px 15px 15px 65px;
-            text-indent: -999999px;
-            overflow: hidden;
             &:focus {
                 outline: none;
             }
         }
+    }
+    @media(max-width:768px) {
+        background-color: transparent;
     }
     @media(max-width:968px) {
         .navbar-brand {
@@ -195,9 +200,6 @@ a {
     }
     #join {
         text-align: left;
-        position: absolute;
-        left: 260px;
-        top: 270px;
         a {
             display: block;
             text-decoration: underline;
@@ -282,12 +284,28 @@ a {
                 font-size: 26px;
             }
         }
+        #join {
+            position: absolute;
+            left: 260px;
+            top: 110px;
+        }
     }
     @media(max-width:768px) {
         position: relative;
         video {
             min-height: auto;
             top: auto;
+        }
+        #join {
+            width: 210px;
+            padding-left: 60px;
+            margin: 30px auto 0 auto;
+        }
+        #greaterLogo {
+            position: absolute;
+            top: -200px;
+            right: 230px;
+            transform: scale(.5);
         }
     }
 
@@ -310,6 +328,7 @@ h2.big {
         bottom: -25px;
         left: 0;
     }
+
     &.light {
         color: white;
     }
@@ -366,9 +385,9 @@ p {
     h2 {
         position: relative;
         &.page-number:before {
-            content: "#002";            
-            top: -100px;
-            left: 200px;
+            content: "#002";  
+            top: -20px;
+            right: 0px;
         }
     }
     .about-left {
@@ -377,6 +396,12 @@ p {
 
     @media(min-width:768px) {
        padding-top: 150px;
+       h2 {
+           &.page-number:before {
+                top: -100px;
+                left: 200px;
+           }
+       }
     }
 }
 
@@ -411,8 +436,9 @@ p {
     }
     h2.page-number:before {
         content: "#003";
-        top: 160px;
-        left: 320px;
+        top: -30px;
+        left: auto;
+        right: 2px;
     }
     #people {
         div {
@@ -486,10 +512,10 @@ p {
             background-image: url(../img/5-mitchell.jpg) 
         }
         .pax-6 {
-            background-image: url(../img/7-dave.jpg) 
+            background-image: url(../img/6-david.jpg) 
         }
         .pax-7 {
-            background-image: url(../img/6-david.jpg) 
+            background-image: url(../img/7-dave.jpg) 
         }
         .pax-8 {
             background-image: url(../img/8-sharon.jpg) 
@@ -514,6 +540,12 @@ p {
                 }
             }            
         }
+        h2.page-number:before {
+            top: 160px;
+            left: 320px;
+            right: auto;
+        }
+
     }
 }
 
@@ -596,6 +628,11 @@ p {
                 top: -20px;
              }
         }
+        h2.page-number:before {
+            left: 10px;
+        }
+        padding-top: 60px;
+        padding-bottom: 30px;
     }
 }
 
@@ -613,6 +650,9 @@ p {
         p {
             margin-bottom: 120px;
         }
+        img {
+            display: none;
+        }
     }
     #movement-dots {
         position: absolute;
@@ -622,6 +662,9 @@ p {
     @media(min-width:768px) {
         padding-top: 150px;
         padding-bottom: 150px;
+        img {
+            display: block;
+        }
     }
 }
 
