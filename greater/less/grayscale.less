@@ -917,7 +917,12 @@ body {
 }
 
 
-
+// Fix overflow on mobile. Not proud of this:
+@media(max-width:768px) {
+    section {
+        overflow-x: hidden;
+    }
+}
 
 
 
