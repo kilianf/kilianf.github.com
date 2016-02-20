@@ -210,7 +210,7 @@ mark {
 }
 .intro #greaterLogo {
   position: absolute;
-  top: -360px;
+  top: -292px;
   right: 100px;
 }
 .intro #join {
@@ -277,7 +277,7 @@ mark {
 }
 .intro #dots {
   position: absolute;
-  top: -300px;
+  top: -230px;
   left: -150px;
 }
 .intro #slashes {
@@ -286,6 +286,11 @@ mark {
   left: -20px;
   text-align: right;
   color: #808080;
+}
+.intro #bar-dot {
+  position: absolute;
+  top: -120px;
+  left: 223px;
 }
 .intro video {
   position: absolute;
@@ -335,13 +340,16 @@ mark {
   }
   .intro #join {
     position: absolute;
-    left: 260px;
-    top: 110px;
+    left: 50%;
+    margin-left: -110px;
+    bottom: 150px;
+    z-index: 2;
   }
 }
 @media (max-width: 768px) {
   .intro {
     position: relative;
+    padding: 210px 0;
   }
   .intro video {
     min-height: auto;
@@ -349,14 +357,21 @@ mark {
   }
   .intro #join {
     width: 210px;
-    padding-left: 60px;
-    margin: 30px auto 0 auto;
+    margin-left: -50px;
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
   }
   .intro #greaterLogo {
     position: absolute;
     top: -200px;
-    right: 230px;
+    margin-left: -70px;
+    left: 50%;
     transform: scale(0.5);
+  }
+  .intro #slashes {
+    top: 150px;
+    left: -60px;
   }
 }
 h2.big {
@@ -418,7 +433,7 @@ p b {
 #about .about-quote svg {
   position: absolute;
   top: -200px;
-  left: -50px;
+  left: -40px;
 }
 #about h2 {
   position: relative;
@@ -436,7 +451,7 @@ p b {
     padding-top: 150px;
   }
   #about h2.page-number:before {
-    top: -100px;
+    top: -84px;
     left: 200px;
   }
 }
@@ -453,10 +468,11 @@ p b {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/slashes.svg) no-repeat 20% 300px black;
+  background: url(../img/lines-light-single.svg) no-repeat 0 0 black;
 }
 .who-section .container {
   text-align: right;
+  background: url(../img/slashes.svg) no-repeat 0 164px transparent;
 }
 .who-section h2.page-number:before {
   content: "#003";
@@ -614,7 +630,7 @@ p b {
 }
 #how h2.page-number:before {
   content: "#004";
-  top: -130px;
+  top: -48px;
   left: 140px;
 }
 #how .how-left {
@@ -631,7 +647,7 @@ p b {
   position: absolute;
   left: -91px;
   top: 0;
-  border: 1px solid #808080;
+  border: 3px solid #808080;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
@@ -666,13 +682,11 @@ p b {
     left: 10px;
   }
 }
+#movement h3 {
+  color: black;
+}
 #movement .movement-quote {
   position: relative;
-}
-#movement .movement-quote svg {
-  position: absolute;
-  top: 180px;
-  left: 270px;
 }
 #movement .movement-quote p {
   margin-bottom: 120px;
@@ -682,15 +696,30 @@ p b {
 }
 #movement #movement-dots {
   position: absolute;
-  top: 260px;
+  top: 222px;
   right: 65px;
+}
+#movement #movement-slashes {
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  text-align: right;
+  color: #808080;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+#movement #movement-slashes p {
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   #movement {
     padding-top: 150px;
     padding-bottom: 150px;
   }
-  #movement img {
+  #movement .movement-quote img {
     display: block;
   }
 }
@@ -708,6 +737,15 @@ p b {
   position: absolute;
   left: 190px;
   top: -40px;
+}
+#story #story-slash {
+  position: absolute;
+  right: 90px;
+  top: -650px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
 }
 @media (min-width: 768px) {
   #story {

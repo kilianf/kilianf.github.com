@@ -217,7 +217,7 @@ mark {
     }
     #greaterLogo {
         position: absolute;
-        top: -360px;
+        top: -292px;
         right: 100px;
     }
     #join {
@@ -280,7 +280,7 @@ mark {
     }
     #dots {        
         position: absolute;
-        top: -300px;
+        top: -230px;
         left: -150px;
     }
     #slashes {        
@@ -289,6 +289,11 @@ mark {
         left: -20px;
         text-align: right;
         color: @graytext;
+    }
+    #bar-dot {
+        position: absolute;
+        top: -120px;
+        left: 223px;
     }
     video {
         position: absolute;
@@ -341,26 +346,36 @@ mark {
         }
         #join {
             position: absolute;
-            left: 260px;
-            top: 110px;
+            left: 50%;
+            margin-left: -110px;
+            bottom: 150px;
+            z-index: 2;
         }
     }
     @media(max-width:768px) {
         position: relative;
+        padding: 210px 0;
         video {
             min-height: auto;
             top: auto;
         }
         #join {
             width: 210px;
-            padding-left: 60px;
-            margin: 30px auto 0 auto;
+            margin-left: -50px;
+            position: absolute;
+            bottom: 110px;
+            left: 50%;
         }
         #greaterLogo {
             position: absolute;
             top: -200px;
-            right: 230px;
+            margin-left: -70px;
+            left: 50%;
             transform: scale(.5);
+        }
+        #slashes {
+            top: 150px;
+            left: -60px;
         }
     }
 
@@ -434,7 +449,7 @@ p {
         svg {
             position: absolute; 
             top: -200px;
-            left: -50px
+            left: -40px;
         }
     }
     h2 {
@@ -453,7 +468,7 @@ p {
        padding-top: 150px;
        h2 {
            &.page-number:before {
-                top: -100px;
+                top: -84px;
                 left: 200px;
            }
        }
@@ -485,9 +500,10 @@ p {
     width: 100%;
     padding: 50px 0;
     color: white;
-    background: url(../img/slashes.svg) no-repeat 20% 300px black;
+    background: url(../img/lines-light-single.svg) no-repeat 0 0 black;
     .container {
         text-align: right;
+        background: url(../img/slashes.svg) no-repeat 0 164px transparent;
     }
     h2.page-number:before {
         content: "#003";
@@ -638,7 +654,7 @@ p {
     background: url(../img/lines.svg) no-repeat right center black;
     h2.page-number:before {
         content: "#004";
-        top: -130px;
+        top: -48px;
         left: 140px;
     }
     .how-left {
@@ -654,7 +670,7 @@ p {
             position: absolute;
             left: -91px;
             top: 0;
-            border: 1px solid @graytext;
+            border: 3px solid @graytext;
             .border-radius(100%);
             color: @graytext;
         }
@@ -694,14 +710,11 @@ p {
 // Movement section 
 
 #movement {
-    
+    h3 {        
+        color: black;
+    }
     .movement-quote {
         position: relative;
-        svg {
-            position: absolute;
-            top: 180px;
-            left: 270px
-        }
         p {
             margin-bottom: 120px;
         }
@@ -711,16 +724,31 @@ p {
     }
     #movement-dots {
         position: absolute;
-        top: 260px;
+        top: 222px;
         right: 65px;
+    }
+    #movement-slashes {        
+        position: absolute;
+        bottom: -40px;
+        right: -10px;
+        text-align: right;
+        color: @graytext;
+        .rotate(90deg);
+        p {
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
     }
     @media(min-width:768px) {
         padding-top: 150px;
         padding-bottom: 150px;
-        img {
-            display: block;
+        .movement-quote {
+            img {
+                display: block;
+            }
         }
     }
+
 }
 
 // Our Story section 
@@ -740,6 +768,13 @@ p {
         position: absolute;
         left: 190px;
         top: -40px;
+    }
+
+    #story-slash {
+        position: absolute;
+        right: 90px;
+        top: -650px;
+        .rotate(90deg);
     }
     @media(min-width:768px) {
         padding-top: 150px;
