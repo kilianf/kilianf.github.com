@@ -44,6 +44,11 @@ a:focus {
   text-decoration: none;
   color: #aaaaaa;
 }
+mark {
+  padding: .2em .4em;
+  background-color: #DDDDDD;
+  white-space: nowrap;
+}
 .light {
   font-weight: 400;
 }
@@ -165,6 +170,21 @@ a:focus {
   -o-background-size: cover;
   overflow: hidden;
 }
+.intro #social {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #5F5F5F;
+  padding: 14px 20px 10px 20px;
+  z-index: 2;
+}
+.intro #social svg:hover polygon,
+.intro #social svg:hover path {
+  fill: black;
+}
+.intro #social svg:hover circle {
+  stroke: black;
+}
 .intro .fullscreen-bg {
   overflow: hidden;
 }
@@ -199,6 +219,26 @@ a:focus {
 .intro #join a {
   display: block;
   text-decoration: underline;
+  position: relative;
+}
+.intro #join a:after {
+  -webkit-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  -ms-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  top: -40px;
+  bottom: -30px;
+  border: 5px solid #dddddd;
+  display: block;
+  content: "";
+  opacity: 0;
+  z-index: -1;
+}
+.intro #join a:hover:after {
+  opacity: .5;
 }
 .intro #join svg {
   animation: blinker 1s linear infinite;
@@ -782,11 +822,6 @@ p b {
 .content-section {
   padding-top: 100px;
 }
-#map {
-  width: 100%;
-  height: 200px;
-  margin-top: 100px;
-}
 @media (min-width: 767px) {
   .content-section {
     padding-top: 250px;
@@ -797,6 +832,27 @@ p b {
   #map {
     height: 400px;
     margin-top: 250px;
+  }
+}
+#connect {
+  background-color: #5F5F5F;
+  text-align: center;
+  padding: 30px;
+}
+#connect svg {
+  transform: scale(1.4);
+  margin: 0 10px;
+}
+#connect svg:hover polygon,
+#connect svg:hover path {
+  fill: black;
+}
+#connect svg:hover circle {
+  stroke: black;
+}
+@media (min-width: 767px) {
+  #connect {
+    padding: 100px;
   }
 }
 .btn {

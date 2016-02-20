@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     // compilation.css  :  source.less
-                    "css/grayscale.css": "less/grayscale.less"
+                    "css/greater-main.css": "less/greater-main.less"
                 }
             },
         },
