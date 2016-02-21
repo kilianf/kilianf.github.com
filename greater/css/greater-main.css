@@ -680,6 +680,7 @@ p b {
   }
   #how h2.page-number:before {
     left: 10px;
+    top: -118px;
   }
 }
 #movement h3 {
@@ -701,14 +702,10 @@ p b {
 }
 #movement #movement-slashes {
   position: absolute;
-  bottom: -40px;
-  right: -10px;
+  top: -80px;
+  right: 20px;
   text-align: right;
   color: #808080;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
 }
 #movement #movement-slashes p {
   text-decoration: underline;
@@ -718,6 +715,15 @@ p b {
   #movement {
     padding-top: 150px;
     padding-bottom: 150px;
+  }
+  #movement #movement-slashes {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    top: auto;
+    bottom: -40px;
+    right: -10px;
   }
   #movement .movement-quote img {
     display: block;
@@ -736,7 +742,7 @@ p b {
 #story #story-dots {
   position: absolute;
   left: 190px;
-  top: -40px;
+  top: -120px;
 }
 #story #story-slash {
   position: absolute;
@@ -751,6 +757,9 @@ p b {
   #story {
     padding-top: 150px;
     padding-bottom: 150px;
+  }
+  #story #story-dots {
+    top: -40px;
   }
   #story .story-pic {
     display: block;

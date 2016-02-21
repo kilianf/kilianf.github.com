@@ -701,6 +701,7 @@ p {
         }
         h2.page-number:before {
             left: 10px;
+            top: -118px;
         }
         padding-top: 60px;
         padding-bottom: 30px;
@@ -729,11 +730,10 @@ p {
     }
     #movement-slashes {        
         position: absolute;
-        bottom: -40px;
-        right: -10px;
+        top: -80px;
+        right: 20px;
         text-align: right;
         color: @graytext;
-        .rotate(90deg);
         p {
             text-decoration: underline;
             margin-bottom: 10px;
@@ -742,6 +742,12 @@ p {
     @media(min-width:768px) {
         padding-top: 150px;
         padding-bottom: 150px;
+        #movement-slashes {
+            .rotate(90deg);
+            top: auto;
+            bottom: -40px;
+            right: -10px;
+        }
         .movement-quote {
             img {
                 display: block;
@@ -767,7 +773,7 @@ p {
     #story-dots {
         position: absolute;
         left: 190px;
-        top: -40px;
+        top: -120px;
     }
 
     #story-slash {
@@ -779,6 +785,9 @@ p {
     @media(min-width:768px) {
         padding-top: 150px;
         padding-bottom: 150px;
+        #story-dots {
+            top: -40px;
+        }
         .story-pic {
             display: block;
             height: 647px;
