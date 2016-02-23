@@ -483,7 +483,6 @@ p b {
   right: 2px;
 }
 .who-section #people div {
-  width: 50%;
   margin: 0;
   float: left;
   height: 300px;
@@ -492,38 +491,18 @@ p b {
   background-size: cover;
   -o-background-size: cover;
   background-position: center center;
-  position: relative;
-  overflow: hidden;
   display: inline-block;
-}
-.who-section #people div:hover span,
-.who-section #people div:focus span {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  opacity: 1;
 }
 .who-section #people div a {
   text-decoration: underline;
 }
 .who-section #people div span {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   padding: 15% 10% 15%;
   background: url(../img/lines-small.svg) right center rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   -ms-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
-  opacity: 0;
   vertical-align: middle;
 }
 .who-section #people div span p {
@@ -571,16 +550,49 @@ p b {
 .who-section #people .pax-8 {
   background-image: url(../img/8-sharon.jpg);
 }
+@media (max-width: 768px) {
+  .who-section #people div {
+    margin-bottom: 168px;
+    min-height: 350px;
+    width: 50%;
+  }
+  .who-section #people div span {
+    display: block;
+    margin-top: 270px;
+    min-height: 260px;
+    background-color: black;
+  }
+}
+@media (max-width: 380px) {
+  .who-section #people div {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .who-section #people div {
     width: 25%;
     height: 400px;
+    position: relative;
+    overflow: hidden;
     display: table;
+  }
+  .who-section #people div:hover span,
+  .who-section #people div:focus span {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    opacity: 1;
   }
   .who-section #people div span {
     padding: 0 15px;
     display: table-cell;
     position: static;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    opacity: 0;
   }
   .who-section #people div p {
     font-size: 15px;
