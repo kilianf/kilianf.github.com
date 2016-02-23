@@ -300,8 +300,10 @@ mark {
   height: auto;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   background: url(../images/fallback.png) no-repeat;
   background-size: cover;
   -webkit-filter: grayscale(1);
