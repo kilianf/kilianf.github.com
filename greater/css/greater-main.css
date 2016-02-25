@@ -151,10 +151,14 @@ mark {
     display: none;
   }
 }
-@media (max-width: 968px) {
+@media (max-width: 988px) {
   .navbar-custom .navbar-brand {
     padding: 15px 0 15px 15px;
-    background: none;
+  }
+  .navbar-custom .nav > li > a {
+    /* position: relative; */
+    /* display: block; */
+    padding: 10px 7px;
   }
 }
 .intro {
@@ -994,6 +998,11 @@ ul.banner-social-buttons {
   outline: none;
   color: white;
   background-color: transparent;
+}
+@media (max-width: 767px) {
+  #donate a.btn {
+    padding: 10px 40px;
+  }
 }
 footer {
   padding: 50px 0;

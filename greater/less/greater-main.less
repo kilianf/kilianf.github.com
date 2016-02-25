@@ -155,10 +155,14 @@ mark {
     @media(max-width:768px) {
         display: none;
     }
-    @media(max-width:968px) {
+    @media(max-width:988px) {
         .navbar-brand {
             padding: 15px 0 15px 15px;
-            background: none;
+        }
+        .nav>li>a {
+            /* position: relative; */
+            /* display: block; */
+            padding: 10px 7px;
         }
     }
 }
@@ -1044,7 +1048,11 @@ ul.banner-social-buttons {
         color: white;
         background-color: transparent;
     }
-
+    @media(max-width:767px) {
+        a.btn {
+            padding: 10px 40px;
+        }    
+    }
 }
 
 footer {
