@@ -932,7 +932,7 @@ p b {
 }
 @media (min-width: 767px) {
   #connect {
-    padding: 100px;
+    padding: 100px 0;
   }
 }
 .btn {
@@ -973,6 +973,27 @@ ul.banner-social-buttons {
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
+}
+#donate {
+  padding: 100px 0;
+  background-color: black;
+  text-align: center;
+}
+#donate a.btn-default:hover,
+#donate a.btn-default:focus {
+  border: 5px solid #dddddd;
+  outline: none;
+  color: black;
+  background-color: #dddddd;
+}
+#donate a.btn {
+  font-family: "futura-pt", sans-serif;
+  padding: 10px 90px;
+  border-color: #9B9B9B;
+  border: 5px solid #dddddd;
+  outline: none;
+  color: white;
+  background-color: transparent;
 }
 footer {
   padding: 50px 0;
