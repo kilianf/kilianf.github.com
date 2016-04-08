@@ -42,3 +42,27 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
+function translatorY(el){
+    var $this = $(el);
+    if($this.hasClass('activated')){
+        $(window).on('scroll',function(){
+            console.log("farts")
+        })
+    }
+    var dest = 100;
+   // console.log(this)
+    $(el).css('transform', 'translateY(-' + dest + 'px)');
+}
+
+
+hunt(document.getElementById('about'), {
+    in: function() {
+        $(this).toggleClass('activated')
+        translatorY(this)
+    },
+    out: function() {
+        $(this).toggleClass('activated')
+        console.log("I'm out")
+    },
+    persist: true
+});
