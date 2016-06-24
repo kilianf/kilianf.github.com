@@ -42,3 +42,17 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
+$("#play").click(function(e) {
+    var $intro = $(".intro")
+      , $body = $("body");
+    e.preventDefault(),
+    $body.toggleClass("playing"),
+    document.getElementById("gvideo").innerHTML = '<button class="close-video" style="display: inline-block;"><span class="top"></span><span class="left"></span><span class="bottom"></span></button><div id="youtube-video"><iframe width=' + $intro.width() + " height=" + $intro.outerHeight() + ' src="https://www.youtube.com/embed/NgjndLlF7GU?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen autoplay></iframe></div>',
+    $(".close-video").click(function() {
+        $(".play").removeClass("hidden"),
+        $body.toggleClass("playing"),
+        document.getElementById("gvideo").innerHTML = ""
+    })
+
+
+});

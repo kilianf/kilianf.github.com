@@ -52,6 +52,9 @@ mark {
 .light {
   font-weight: 400;
 }
+.playing .navbar-custom {
+  visibility: hidden;
+}
 .navbar-custom {
   margin-bottom: 0;
   text-transform: uppercase;
@@ -214,7 +217,7 @@ mark {
 }
 .intro #greaterLogo {
   position: absolute;
-  top: -292px;
+  top: -272px;
   right: 100px;
 }
 .intro #join {
@@ -308,7 +311,7 @@ mark {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  background: url(../images/fallback.png) no-repeat;
+  /* background: url(../images/fallback.png) no-repeat;*/
   background-size: cover;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
@@ -326,12 +329,66 @@ mark {
   font-size: 15px;
 }
 .intro a.btn {
-  padding: 10px 90px;
+  padding: 0 80px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.intro a.btn:after {
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  position: absolute;
+  right: -5px;
+  width: 78px;
+  top: 0;
+  bottom: 0;
+  content: "";
+  border: 5px solid #FFFFFF;
+  background-image: url(../img/tri.svg);
+  background-repeat: no-repeat;
+  background-position: -25px center;
+}
+.intro a.btn:hover:after {
+  background-position: 25px center;
+  background-color: white;
   border-color: #9B9B9B;
+}
+.intro a.btn:hover h1 {
+  background-color: white;
+  color: black;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
 }
 .intro h1 {
   font-size: 25px;
   margin: 0;
+  border: 5px solid #dddddd;
+  color: #dddddd;
+  background-color: transparent;
+  padding: 10px 80px;
+  border-color: #9B9B9B;
+}
+.intro #youtube-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: black;
+}
+.intro button.close-video {
+  position: absolute;
+  border: none;
+  top: 0px;
+  right: 0;
+  z-index: 9999;
+  width: 100px;
+  height: 80px;
+  background: url("../img/x.svg") no-repeat center center black;
 }
 @media (min-width: 768px) {
   .intro {
@@ -349,7 +406,8 @@ mark {
     left: 50%;
     margin-left: -110px;
     bottom: 150px;
-    z-index: 2;
+    z-index: 0;
+    opacity: .5;
   }
 }
 @media (max-width: 768px) {
@@ -360,6 +418,9 @@ mark {
   .intro video {
     min-height: auto;
     top: auto;
+  }
+  .intro button.close-video {
+    display: none !important;
   }
   .intro #join {
     width: 210px;
@@ -424,6 +485,7 @@ p b {
 }
 .page-number:before {
   color: #808080;
+  font-weight: normal;
   letter-spacing: 1px;
   position: absolute;
   font-size: 15px;
@@ -537,7 +599,8 @@ p b {
   background-image: url(../img/2-andrew.jpg);
 }
 .who-section #people .pax-3 {
-  background-image: url(../img/3-trish.jpg);
+  /*background-image: url(../img/3-trish.jpg) */
+  background-color: black;
 }
 .who-section #people .pax-4 {
   background-image: url(../img/4-matt.jpg);
@@ -660,12 +723,13 @@ p b {
 }
 #how h3:after {
   padding: 22px 19px 22px 24px;
+  font-weight: normal;
   font-size: 20px;
   font-family: "anonymous-pro", sans-serif;
   position: absolute;
   left: -91px;
   top: 0;
-  border: 3px solid #808080;
+  border: 2px solid #808080;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
@@ -750,6 +814,11 @@ p b {
 #story img {
   width: 100%;
   height: auto;
+}
+#story h2.page-number:before {
+  content: "#006";
+  top: -20px;
+  left: 270px;
 }
 #story .story-right {
   padding-top: 50px;
@@ -903,7 +972,7 @@ p b {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 250px;
+    padding-top: 125px;
   }
   .download-section {
     padding: 100px 0;
