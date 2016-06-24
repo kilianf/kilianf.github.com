@@ -42,7 +42,6 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
-<<<<<<< HEAD
 $("#play").click(function(e) {
     var $intro = $(".intro")
       , $body = $("body");
@@ -56,29 +55,4 @@ $("#play").click(function(e) {
     })
 
 
-=======
-function translatorY(el){
-    var $this = $(el);
-    if($this.hasClass('activated')){
-        $(window).on('scroll',function(){
-            console.log("farts")
-        })
-    }
-    var dest = 100;
-   // console.log(this)
-    $(el).css('transform', 'translateY(-' + dest + 'px)');
-}
-
-
-hunt(document.getElementById('about'), {
-    in: function() {
-        $(this).toggleClass('activated')
-        translatorY(this)
-    },
-    out: function() {
-        $(this).toggleClass('activated')
-        console.log("I'm out")
-    },
-    persist: true
->>>>>>> 9a465205077e9b4bd9f41ff3bf19473971b2d0d3
 });
