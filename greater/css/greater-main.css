@@ -419,6 +419,9 @@ mark {
     min-height: auto;
     top: auto;
   }
+  .intro h1 {
+    padding: 10px 30px;
+  }
   .intro button.close-video {
     display: none !important;
   }
@@ -599,8 +602,7 @@ p b {
   background-image: url(../img/2-andrew.jpg);
 }
 .who-section #people .pax-3 {
-  /*background-image: url(../img/3-trish.jpg) */
-  background-color: black;
+  background-image: url(../img/3-lucas.jpg);
 }
 .who-section #people .pax-4 {
   background-image: url(../img/4-matt.jpg);
@@ -792,6 +794,52 @@ p b {
 #movement #movement-slashes p {
   text-decoration: underline;
   margin-bottom: 10px;
+}
+#movement .fellows {
+  width: 360px;
+  position: relative;
+}
+#movement .fellows a {
+  position: absolute;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  right: 20px;
+  top: 338px;
+  background: url(../img/plus.svg) no-repeat left top;
+}
+#movement .fellows a:hover {
+  background-position: left -42px;
+  -webkit-transform: translate(0, -5px);
+  -moz-transform: translate(0, -5px);
+  -ms-transform: translate(0, -5px);
+  -o-transform: translate(0, -5px);
+}
+#movement .fellows img {
+  width: 100%;
+  height: auto;
+}
+#movement .fellows h3 {
+  margin: 20px 0 10px 20px;
+}
+#movement .fellows p {
+  margin: 0 0 50px 20px;
+}
+#movement .fellows div {
+  display: none;
+}
+#movement .fellows div p {
+  margin-top: -20px;
+}
+#movement .fellows.active div {
+  display: block;
+}
+#movement .fellows.active a {
+  background: url(../img/plus.svg) no-repeat -42px top;
+}
+#movement .fellows.active a:hover {
+  background: url(../img/plus.svg) no-repeat -42px -42px;
 }
 @media (min-width: 768px) {
   #movement {

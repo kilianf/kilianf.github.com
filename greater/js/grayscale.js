@@ -42,6 +42,13 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
+$('.fellows a').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().toggleClass('active');
+})
+
+
+// Video
 $("#play").click(function(e) {
     var $intro = $(".intro")
       , $body = $("body");

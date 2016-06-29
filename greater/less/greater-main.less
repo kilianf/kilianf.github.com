@@ -419,6 +419,9 @@ mark {
             min-height: auto;
             top: auto;
         }
+        h1 {
+            padding: 10px 30px;
+        }
         button.close-video {
             display: none !important;
         }
@@ -621,8 +624,7 @@ p {
             background-image: url(../img/2-andrew.jpg) 
         }
         .pax-3 {
-            /*background-image: url(../img/3-trish.jpg) */
-            background-color: black;
+            background-image: url(../img/3-lucas.jpg) 
         }
         .pax-4 {
             background-image: url(../img/4-matt.jpg) 
@@ -820,6 +822,57 @@ p {
         p {
             text-decoration: underline;
             margin-bottom: 10px;
+        }
+    }
+    .fellows {
+        width: 360px;
+        position: relative;
+        a {
+            position: absolute;
+            text-indent: -9999px;
+            overflow: hidden;
+            width: 42px;
+            height: 42px;
+            right: 20px;
+            top: 338px;
+            background: url(../img/plus.svg) no-repeat left top;
+            &:hover {
+                background-position: left -42px;
+                .translate(0,-5px);
+            }
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }      
+        &.taiwan {
+        }
+        &.michael {
+        }
+        &.britney {
+        }
+        h3 {
+            margin: 20px 0 10px 20px;
+        }
+        p {
+            margin: 0 0 50px 20px;
+        }
+        div {
+            display: none;
+            p {
+                margin-top: -20px;
+            }
+        }
+        &.active {
+            div {
+                display: block;
+            }
+            a {
+                background: url(../img/plus.svg) no-repeat -42px top;
+                &:hover {
+                   background: url(../img/plus.svg) no-repeat -42px -42px; 
+                }
+            }
         }
     }
     @media(min-width:768px) {
