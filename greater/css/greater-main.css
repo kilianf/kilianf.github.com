@@ -775,13 +775,12 @@ p b {
 }
 #movement .movement-quote p {
   margin-bottom: 120px;
-}
-#movement .movement-quote img {
-  display: none;
+  position: relative;
+  z-index: 999;
 }
 #movement #movement-dots {
   position: absolute;
-  top: 222px;
+  bottom: -162px;
   right: 65px;
 }
 #movement #movement-slashes {
@@ -795,9 +794,23 @@ p b {
   text-decoration: underline;
   margin-bottom: 10px;
 }
+#movement ul {
+  margin-bottom: 30px;
+}
+#movement ul li {
+  font-size: 15px;
+  line-height: 1.6;
+}
+#movement a {
+  color: #A9A9A9;
+  border-bottom: 1px solid #ddd;
+}
 #movement .fellows {
-  width: 360px;
   position: relative;
+}
+#movement .fellows span {
+  position: relative;
+  display: inline-block;
 }
 #movement .fellows a {
   position: absolute;
@@ -806,7 +819,7 @@ p b {
   width: 42px;
   height: 42px;
   right: 20px;
-  top: 338px;
+  bottom: -13px;
   background: url(../img/plus.svg) no-repeat left top;
 }
 #movement .fellows a:hover {
@@ -828,8 +841,8 @@ p b {
 }
 #movement .fellows div {
   display: none;
-}
-#movement .fellows div p {
+  height: 0;
+  overflow: hidden;
   margin-top: -20px;
 }
 #movement .fellows.active div {
@@ -847,16 +860,19 @@ p b {
     padding-bottom: 150px;
   }
   #movement #movement-slashes {
+    top: -40px;
+    right: 80px;
+  }
+  #movement .movement-quote img {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  #movement #movement-slashes {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
-    top: auto;
-    bottom: -40px;
-    right: -10px;
-  }
-  #movement .movement-quote img {
-    display: block;
   }
 }
 #story img {
@@ -1149,5 +1165,73 @@ body {
 @media (max-width: 768px) {
   section {
     overflow-x: hidden;
+  }
+}
+@media (min-width: 767px) {
+  .mouse {
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -12px;
+    border-radius: 15px;
+    border: 2px solid #888;
+    -webkit-animation: intro 1s;
+    animation: intro 1s;
+  }
+  .scroll {
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin: 6px auto;
+    border-radius: 4px;
+    background: #888;
+    -webkit-animation: finger 1.3s infinite;
+    animation: finger 1.3s infinite;
+  }
+  @-webkit-keyframes intro {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes intro {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @-webkit-keyframes finger {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+  }
+  @keyframes finger {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
   }
 }

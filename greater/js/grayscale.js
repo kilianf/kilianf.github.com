@@ -43,9 +43,13 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 $('.fellows a').on('click', function(e){
+    var $fellows = $(this).closest('.fellows'),
+        $hidDiv = $fellows.find('div')
+
     e.preventDefault();
-    $(this).parent().toggleClass('active');
-})
+    $fellows.toggleClass('active');
+    $hidDiv.animate({height: $hidDiv.get(0).scrollHeight}, 500 );
+});
 
 
 // Video

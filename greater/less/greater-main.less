@@ -803,14 +803,16 @@ p {
         position: relative;
         p {
             margin-bottom: 120px;
+            position: relative;
+            z-index: 999;
         }
-        img {
-            display: none;
-        }
+        // img {
+        //     display: none;
+        // }
     }
     #movement-dots {
         position: absolute;
-        top: 222px;
+        bottom: -162px;
         right: 65px;
     }
     #movement-slashes {        
@@ -824,9 +826,24 @@ p {
             margin-bottom: 10px;
         }
     }
+    ul {
+        margin-bottom: 30px;
+        li {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    }
+    a {
+        color: #A9A9A9;
+        border-bottom: 1px solid #ddd;
+    }
     .fellows {
-        width: 360px;
         position: relative;
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
         a {
             position: absolute;
             text-indent: -9999px;
@@ -834,7 +851,7 @@ p {
             width: 42px;
             height: 42px;
             right: 20px;
-            top: 338px;
+            bottom: -13px;
             background: url(../img/plus.svg) no-repeat left top;
             &:hover {
                 background-position: left -42px;
@@ -859,8 +876,11 @@ p {
         }
         div {
             display: none;
+            height: 0;
+            overflow: hidden;
+            margin-top: -20px;
             p {
-                margin-top: -20px;
+
             }
         }
         &.active {
@@ -879,15 +899,18 @@ p {
         padding-top: 150px;
         padding-bottom: 150px;
         #movement-slashes {
-            .rotate(90deg);
-            top: auto;
-            bottom: -40px;
-            right: -10px;
+            top: -40px;
+            right: 80px;
         }
         .movement-quote {
             img {
                 display: block;
             }
+        }
+    }
+    @media(min-width:992px) {
+        #movement-slashes {
+            .rotate(90deg);
         }
     }
 
@@ -1217,7 +1240,77 @@ body {
 
 
 
+// Mouse cursor
 
+
+@media(min-width:767px) {
+    .mouse {
+      position: absolute;
+      width: 22px;
+      height: 42px;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -12px;
+      border-radius: 15px;
+      border: 2px solid #888;
+      -webkit-animation: intro 1s;
+      animation: intro 1s;
+    }
+    .scroll {
+      display: block;
+      width: 4px;
+      height: 4px;
+      margin: 6px auto;
+      border-radius: 4px;
+      background: #888;
+      -webkit-animation: finger 1.3s infinite;
+      animation: finger 1.3s infinite;
+    }
+    @-webkit-keyframes intro {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+    @keyframes intro {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+    @-webkit-keyframes finger {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+      }
+    }
+    @keyframes finger {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+      }
+    }
+}
 
 
 
