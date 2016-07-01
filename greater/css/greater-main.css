@@ -854,6 +854,11 @@ p b {
 #movement .fellows.active a:hover {
   background: url(../img/plus.svg) no-repeat -42px -42px;
 }
+@media (max-width: 1200px) {
+  #movement h2.big {
+    font-size: 90px;
+  }
+}
 @media (min-width: 768px) {
   #movement {
     padding-top: 150px;
