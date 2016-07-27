@@ -1,5 +1,5 @@
 * {
-    font-family: "nimbus-sans-condensed";
+    font-family: "futura-pt",sans-serif;
     color: #777;
     letter-spacing: normal;
 }
@@ -156,13 +156,13 @@ a:focus::after {
     .project-1 {
     }
     .project-2 .mobile img {
-        margin-top: 32%;
+        margin-top: 90%;
     }
     .project-3 .mobile img { 
-        margin-top: 166%;
+        margin-top: 46%;
     }
     .project-4 .mobile img {
-        margin-top: 152%;
+        margin-top: 98%;
     }
     .project-5 .mobile img {
         margin-top: 63%;
@@ -170,6 +170,6 @@ a:focus::after {
     .project-6 .mobile img {
     }
     .project-7 .mobile img {
-        margin-top: 40%;
+        margin-top: 84%;
     }
 }
