@@ -42,27 +42,28 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
-function translatorY(el){
-    var $this = $(el);
-    if($this.hasClass('activated')){
-        $(window).on('scroll',function(){
-            console.log("farts")
-        })
-    }
-    var dest = 100;
-   // console.log(this)
-    $(el).css('transform', 'translateY(-' + dest + 'px)');
-}
+$('.fellows a').on('click', function(e){
+    var $fellows = $(this).closest('.fellows'),
+        $hidDiv = $fellows.find('div')
+
+    e.preventDefault();
+    $fellows.toggleClass('active');
+    $hidDiv.animate({height: $hidDiv.get(0).scrollHeight}, 500 );
+});
 
 
-hunt(document.getElementById('about'), {
-    in: function() {
-        $(this).toggleClass('activated')
-        translatorY(this)
-    },
-    out: function() {
-        $(this).toggleClass('activated')
-        console.log("I'm out")
-    },
-    persist: true
+// Video
+$("#play").click(function(e) {
+    var $intro = $(".intro")
+      , $body = $("body");
+    e.preventDefault(),
+    $body.toggleClass("playing"),
+    document.getElementById("gvideo").innerHTML = '<button class="close-video" style="display: inline-block;"><span class="top"></span><span class="left"></span><span class="bottom"></span></button><div id="youtube-video"><iframe width=' + $intro.width() + " height=" + $intro.outerHeight() + ' src="https://www.youtube.com/embed/NgjndLlF7GU?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen autoplay></iframe></div>',
+    $(".close-video").click(function() {
+        $(".play").removeClass("hidden"),
+        $body.toggleClass("playing"),
+        document.getElementById("gvideo").innerHTML = ""
+    })
+
+
 });

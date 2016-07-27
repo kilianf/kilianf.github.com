@@ -52,6 +52,9 @@ mark {
 .light {
   font-weight: 400;
 }
+.playing .navbar-custom {
+  visibility: hidden;
+}
 .navbar-custom {
   margin-bottom: 0;
   text-transform: uppercase;
@@ -214,7 +217,7 @@ mark {
 }
 .intro #greaterLogo {
   position: absolute;
-  top: -292px;
+  top: -272px;
   right: 100px;
 }
 .intro #join {
@@ -308,7 +311,7 @@ mark {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  background: url(../images/fallback.png) no-repeat;
+  /* background: url(../images/fallback.png) no-repeat;*/
   background-size: cover;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
@@ -326,12 +329,66 @@ mark {
   font-size: 15px;
 }
 .intro a.btn {
-  padding: 10px 90px;
+  padding: 0 80px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.intro a.btn:after {
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  position: absolute;
+  right: -5px;
+  width: 78px;
+  top: 0;
+  bottom: 0;
+  content: "";
+  border: 5px solid #FFFFFF;
+  background-image: url(../img/tri.svg);
+  background-repeat: no-repeat;
+  background-position: -25px center;
+}
+.intro a.btn:hover:after {
+  background-position: 25px center;
+  background-color: white;
   border-color: #9B9B9B;
+}
+.intro a.btn:hover h1 {
+  background-color: white;
+  color: black;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
 }
 .intro h1 {
   font-size: 25px;
   margin: 0;
+  border: 5px solid #dddddd;
+  color: #dddddd;
+  background-color: transparent;
+  padding: 10px 80px;
+  border-color: #9B9B9B;
+}
+.intro #youtube-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: black;
+}
+.intro button.close-video {
+  position: absolute;
+  border: none;
+  top: 0px;
+  right: 0;
+  z-index: 9999;
+  width: 100px;
+  height: 80px;
+  background: url("../img/x.svg") no-repeat center center black;
 }
 @media (min-width: 768px) {
   .intro {
@@ -349,7 +406,8 @@ mark {
     left: 50%;
     margin-left: -110px;
     bottom: 150px;
-    z-index: 2;
+    z-index: 0;
+    opacity: .5;
   }
 }
 @media (max-width: 768px) {
@@ -360,6 +418,12 @@ mark {
   .intro video {
     min-height: auto;
     top: auto;
+  }
+  .intro h1 {
+    padding: 10px 30px;
+  }
+  .intro button.close-video {
+    display: none !important;
   }
   .intro #join {
     width: 210px;
@@ -424,6 +488,7 @@ p b {
 }
 .page-number:before {
   color: #808080;
+  font-weight: normal;
   letter-spacing: 1px;
   position: absolute;
   font-size: 15px;
@@ -537,7 +602,7 @@ p b {
   background-image: url(../img/2-andrew.jpg);
 }
 .who-section #people .pax-3 {
-  background-image: url(../img/3-trish.jpg);
+  background-image: url(../img/3-lucas.jpg);
 }
 .who-section #people .pax-4 {
   background-image: url(../img/4-matt.jpg);
@@ -660,12 +725,13 @@ p b {
 }
 #how h3:after {
   padding: 22px 19px 22px 24px;
+  font-weight: normal;
   font-size: 20px;
   font-family: "anonymous-pro", sans-serif;
   position: absolute;
   left: -91px;
   top: 0;
-  border: 3px solid #808080;
+  border: 2px solid #808080;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
@@ -709,13 +775,12 @@ p b {
 }
 #movement .movement-quote p {
   margin-bottom: 120px;
-}
-#movement .movement-quote img {
-  display: none;
+  position: relative;
+  z-index: 999;
 }
 #movement #movement-dots {
   position: absolute;
-  top: 222px;
+  bottom: -162px;
   right: 65px;
 }
 #movement #movement-slashes {
@@ -729,27 +794,100 @@ p b {
   text-decoration: underline;
   margin-bottom: 10px;
 }
+#movement ul {
+  margin-bottom: 30px;
+}
+#movement ul li {
+  font-size: 15px;
+  line-height: 1.6;
+}
+#movement a {
+  color: #A9A9A9;
+  border-bottom: 1px solid #ddd;
+}
+#movement .fellows {
+  position: relative;
+}
+#movement .fellows span {
+  position: relative;
+  display: inline-block;
+}
+#movement .fellows a {
+  position: absolute;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  right: 20px;
+  bottom: -13px;
+  background: url(../img/plus.svg) no-repeat left top;
+}
+#movement .fellows a:hover {
+  background-position: left -42px;
+  -webkit-transform: translate(0, -5px);
+  -moz-transform: translate(0, -5px);
+  -ms-transform: translate(0, -5px);
+  -o-transform: translate(0, -5px);
+}
+#movement .fellows img {
+  width: 100%;
+  height: auto;
+}
+#movement .fellows h3 {
+  margin: 20px 0 10px 20px;
+}
+#movement .fellows p {
+  margin: 0 0 50px 20px;
+}
+#movement .fellows div {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin-top: -20px;
+}
+#movement .fellows.active div {
+  display: block;
+}
+#movement .fellows.active a {
+  background: url(../img/plus.svg) no-repeat -42px top;
+}
+#movement .fellows.active a:hover {
+  background: url(../img/plus.svg) no-repeat -42px -42px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  #movement h2.big {
+    font-size: 90px;
+  }
+}
 @media (min-width: 768px) {
   #movement {
     padding-top: 150px;
     padding-bottom: 150px;
   }
   #movement #movement-slashes {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    top: auto;
-    bottom: -40px;
-    right: -10px;
+    top: -40px;
+    right: 80px;
   }
   #movement .movement-quote img {
     display: block;
   }
 }
+@media (min-width: 992px) {
+  #movement #movement-slashes {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+}
 #story img {
   width: 100%;
   height: auto;
+}
+#story h2.page-number:before {
+  content: "#006";
+  top: -20px;
+  left: 270px;
 }
 #story .story-right {
   padding-top: 50px;
@@ -903,7 +1041,7 @@ p b {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 250px;
+    padding-top: 125px;
   }
   .download-section {
     padding: 100px 0;
@@ -1032,5 +1170,73 @@ body {
 @media (max-width: 768px) {
   section {
     overflow-x: hidden;
+  }
+}
+@media (min-width: 767px) {
+  .mouse {
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -12px;
+    border-radius: 15px;
+    border: 2px solid #888;
+    -webkit-animation: intro 1s;
+    animation: intro 1s;
+  }
+  .scroll {
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin: 6px auto;
+    border-radius: 4px;
+    background: #888;
+    -webkit-animation: finger 1.3s infinite;
+    animation: finger 1.3s infinite;
+  }
+  @-webkit-keyframes intro {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes intro {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @-webkit-keyframes finger {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+  }
+  @keyframes finger {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
   }
 }
