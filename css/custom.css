@@ -103,7 +103,7 @@ a:focus::after {
 
 
 @media only screen and (max-width : 768px) {
-  .project-2 .mobile {
+  .project-0 .mobile {
     display: none;
   }
 }
@@ -158,13 +158,17 @@ a:focus::after {
     .project {
         padding: 100px 0;        
     }
-    .project-1 {
+    .project-0 {
+      margin-top: 100px;
     }
-    .project-2 .mobile img {
+    .project-0 .mobile img {
         margin-top: 0;
         transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
+    }
+    .project-2 .mobile img {
+        margin-top: 96%l
     }
     .project-3 .mobile img { 
         margin-top: 46%;
