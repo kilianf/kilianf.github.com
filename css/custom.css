@@ -102,6 +102,11 @@ a:focus::after {
 }
 
 
+@media only screen and (max-width : 768px) {
+  .project-2 .mobile {
+    display: none;
+  }
+}
 @media only screen and (min-width : 768px) {
 
     .header h1 {
@@ -156,7 +161,10 @@ a:focus::after {
     .project-1 {
     }
     .project-2 .mobile img {
-        margin-top: 90%;
+        margin-top: 0;
+        transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
     }
     .project-3 .mobile img { 
         margin-top: 46%;
