@@ -100,11 +100,26 @@ a:focus::after {
     margin-left: 10px;
     border-left: 1px solid #ddd;
 }
-
+.project-plate-project .desktop  {
+  position: relative;
+}  
 
 @media only screen and (max-width : 768px) {
   .project-0 .mobile {
     display: none;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .project-plate-project video {
+    position: absolute;
+    top: 6.5%;
+    left: 0;
+    width: 86.1%;
+    margin-left: 7%;
+  }
+  .project-plate-project .mobile-image {
+    padding: 30px 21%;
   }
 }
 @media only screen and (min-width : 768px) {
@@ -183,5 +198,29 @@ a:focus::after {
     }
     .project-7 .mobile img {
         margin-top: 84%;
+    }
+  
+    .project-plate-project .desktop  img {
+      margin-left: 0;
+    }
+    .project-plate-project .desktop  img {
+      margin-left: 0;
+    }
+    .project-plate-project .mobile img {
+        margin-top: 130%;
+        margin-left: -5%;
+    }
+    .project-plate-project video {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 96%;
+      margin-left: 2%;
+    }
+    .project-plate-project .mobile-image {
+      width: 24%;
+      left: -80px;
+      top: 18%;
+      position: absolute;
     }
 }
