@@ -173,9 +173,7 @@ a:focus::after {
     .project {
         padding: 100px 0;        
     }
-    .project-0 {
-      margin-top: 100px;
-    }
+
     .project-0 .mobile img {
         margin-top: 0;
         transform: rotate(-90deg);
@@ -199,7 +197,9 @@ a:focus::after {
     .project-7 .mobile img {
         margin-top: 84%;
     }
-  
+    .project-plate-project {
+      margin-top: 100px;
+    }
     .project-plate-project .desktop  img {
       margin-left: 0;
     }
